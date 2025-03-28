@@ -1,16 +1,16 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>VoltaCompute - AI-Optimized GPU Compute</title>
+  <title>VoltaCompute - AI GPU Cloud</title>
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #0B0C10;
       color: #C5C6C7;
+      scroll-behavior: smooth;
     }
     header {
       background: #1f2833;
@@ -18,6 +18,9 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
     .logo {
       font-size: 1.5rem;
@@ -42,7 +45,7 @@
       margin: 1rem auto 2rem;
       max-width: 600px;
     }
-    .cta {
+    .cta, .form-button {
       padding: 1rem 2rem;
       background-color: #66FCF1;
       color: #0B0C10;
@@ -51,31 +54,43 @@
       cursor: pointer;
       text-decoration: none;
       border-radius: 5px;
+      display: inline-block;
+      margin-top: 1rem;
     }
-    .features {
+    .features, .pricing, .testimonials, .contact, .email-capture {
       padding: 3rem 2rem;
-      background-color: #1f2833;
       text-align: center;
     }
-    .features h2 {
-      color: #66FCF1;
+    .features, .testimonials {
+      background-color: #1f2833;
     }
-    .features-grid {
+    .features-grid, .price-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 2rem;
       max-width: 1000px;
       margin: 2rem auto 0;
     }
-    .feature-item {
+    .feature-item, .price-card, .testimonial {
       background: #0B0C10;
-      padding: 1rem;
+      padding: 1.5rem;
       border: 1px solid #45A29E;
-      border-radius: 5px;
+      border-radius: 8px;
     }
-    .contact {
-      padding: 3rem 2rem;
-      text-align: center;
+    .price-card h3, .testimonial h4 {
+      color: #FFFFFF;
+    }
+    .price-card p, .testimonial p {
+      margin: 1rem 0;
+      font-size: 1.1rem;
+    }
+    form input[type="email"] {
+      padding: 0.7rem;
+      width: 280px;
+      max-width: 80%;
+      border: none;
+      border-radius: 4px;
+      margin-top: 1rem;
     }
     footer {
       background: #1f2833;
@@ -84,6 +99,19 @@
       font-size: 0.9rem;
       color: #45A29E;
     }
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: white;
+      border-radius: 50%;
+      padding: 15px;
+      font-size: 24px;
+      text-align: center;
+      z-index: 1000;
+      text-decoration: none;
+    }
   </style>
 </head>
 <body>
@@ -91,18 +119,20 @@
     <div class="logo">VoltaCompute</div>
     <nav>
       <a href="#features">Features</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#testimonials">Testimonials</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
   <section class="hero">
     <h1>AI-Optimized GPU Compute</h1>
-    <p>Unlock high-performance cloud GPUs like RTX 4090 & H100 — optimized for AI, ML, LLMs, and more. Deploy containers, scale workloads, and pay only for what you use.</p>
-    <a href="https://wa.me/18761234567" class="cta">Start Renting Now</a>
+    <p>Deploy powerful GPUs like RTX 4090 & H100 instantly. Scale AI/ML workloads securely and affordably.</p>
+    <a href="#pricing" class="cta">View Pricing</a>
   </section>
 
   <section class="features" id="features">
-    <h2>Why Choose VoltaCompute?</h2>
+    <h2>Why VoltaCompute?</h2>
     <div class="features-grid">
       <div class="feature-item">⚡ Instant Access to GPUs</div>
       <div class="feature-item">🐳 Docker-Ready Environments</div>
@@ -111,14 +141,56 @@
     </div>
   </section>
 
+  <section class="pricing" id="pricing">
+    <h2>Pricing Plans</h2>
+    <div class="price-grid">
+      <div class="price-card">
+        <h3>RTX 4090</h3>
+        <p><strong>$0.39/hr</strong></p>
+        <p>Perfect for SDXL, LLM fine-tuning, and fast training.</p>
+        <a href="https://buy.stripe.com/test_fZeeWg8et2zY7AA3cc" class="cta">Rent Now</a>
+      </div>
+      <div class="price-card">
+        <h3>H100</h3>
+        <p><strong>$1.99/hr</strong></p>
+        <p>Optimized for enterprise-scale training and production inference.</p>
+        <a href="https://buy.stripe.com/test_7sI9CUaLZ0csfOQfZ1" class="cta">Rent Now</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials" id="testimonials">
+    <h2>What Our Users Say</h2>
+    <div class="features-grid">
+      <div class="testimonial">
+        <h4>Indie ML Developer</h4>
+        <p>“VoltaCompute lets me train models at a fraction of the cost. Fast, smooth, and reliable.”</p>
+      </div>
+      <div class="testimonial">
+        <h4>Startup CTO</h4>
+        <p>“We scaled our inference workloads overnight. Support was top-tier.”</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="email-capture">
+    <h2>Join the Waitlist</h2>
+    <form action="https://formspree.io/f/your-form-id" method="POST">
+      <input type="email" name="email" placeholder="Enter your email" required />
+      <button type="submit" class="form-button">Join Now</button>
+    </form>
+  </section>
+
   <section class="contact" id="contact">
-    <h2>Get in Touch</h2>
-    <p>Chat with us on WhatsApp or email support@voltacompute.com</p>
+    <h2>Need Help?</h2>
+    <p>Email us at support@voltacompute.com or chat now on WhatsApp.</p>
     <a href="https://wa.me/18761234567" class="cta">Message on WhatsApp</a>
   </section>
 
   <footer>
     &copy; 2025 VoltaCompute. All rights reserved.
   </footer>
+
+  <a href="https://wa.me/18761234567" class="whatsapp-float">&#128222;</a>
 </body>
 </html>
