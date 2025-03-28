@@ -1,15 +1,16 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>VoltaCompute - High-Performance GPU Rentals</title>
+  <title>VoltaCompute - AI-Optimized GPU Compute</title>
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #0b0c10;
-      color: #c5c6c7;
+      background-color: #0B0C10;
+      color: #C5C6C7;
     }
     header {
       background: #1f2833;
@@ -20,12 +21,12 @@
     }
     .logo {
       font-size: 1.5rem;
-      color: #66fcf1;
+      color: #66FCF1;
       font-weight: bold;
     }
     nav a {
       margin-left: 2rem;
-      color: #c5c6c7;
+      color: #C5C6C7;
       text-decoration: none;
     }
     .hero {
@@ -33,49 +34,55 @@
       text-align: center;
     }
     .hero h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
+      font-size: 2.8rem;
+      color: #66FCF1;
     }
     .hero p {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
+      font-size: 1.3rem;
+      margin: 1rem auto 2rem;
+      max-width: 600px;
     }
     .cta {
       padding: 1rem 2rem;
-      background-color: #66fcf1;
-      color: #0b0c10;
+      background-color: #66FCF1;
+      color: #0B0C10;
       border: none;
       font-size: 1rem;
       cursor: pointer;
       text-decoration: none;
+      border-radius: 5px;
     }
     .features {
       padding: 3rem 2rem;
       background-color: #1f2833;
+      text-align: center;
     }
     .features h2 {
-      text-align: center;
-      margin-bottom: 2rem;
+      color: #66FCF1;
     }
-    .features ul {
-      list-style: none;
-      padding: 0;
-      max-width: 600px;
-      margin: auto;
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 2rem auto 0;
     }
-    .features li {
-      margin: 1rem 0;
-      font-size: 1.1rem;
+    .feature-item {
+      background: #0B0C10;
+      padding: 1rem;
+      border: 1px solid #45A29E;
+      border-radius: 5px;
     }
     .contact {
-      text-align: center;
       padding: 3rem 2rem;
+      text-align: center;
     }
     footer {
+      background: #1f2833;
       text-align: center;
       padding: 1rem;
-      background: #1f2833;
-      color: #45a29e;
+      font-size: 0.9rem;
+      color: #45A29E;
     }
   </style>
 </head>
@@ -89,25 +96,25 @@
   </header>
 
   <section class="hero">
-    <h1>High-Performance GPU Rentals</h1>
-    <p>Powered by RTX 4090 and H100. Optimized for AI workloads like LLMs, Stable Diffusion, and more.</p>
-    <a href="https://wa.me/18761234567" class="cta">Get Started</a>
+    <h1>AI-Optimized GPU Compute</h1>
+    <p>Unlock high-performance cloud GPUs like RTX 4090 & H100 — optimized for AI, ML, LLMs, and more. Deploy containers, scale workloads, and pay only for what you use.</p>
+    <a href="https://wa.me/18761234567" class="cta">Start Renting Now</a>
   </section>
 
   <section class="features" id="features">
     <h2>Why Choose VoltaCompute?</h2>
-    <ul>
-      <li>⚡ Instant access to powerful GPUs</li>
-      <li>🐳 Docker-ready environments</li>
-      <li>📦 Optimized for LLMs & AI workloads</li>
-      <li>🔒 Secure and private deployment</li>
-    </ul>
+    <div class="features-grid">
+      <div class="feature-item">⚡ Instant Access to GPUs</div>
+      <div class="feature-item">🐳 Docker-Ready Environments</div>
+      <div class="feature-item">💸 Low-Cost Compute from $0.30/hr</div>
+      <div class="feature-item">🔒 Secure & Private Deployments</div>
+    </div>
   </section>
 
   <section class="contact" id="contact">
-    <h2>Need Help?</h2>
-    <p>Contact us directly on WhatsApp or email us at support@voltacompute.com</p>
-    <a href="https://wa.me/18761234567" class="cta">Chat on WhatsApp</a>
+    <h2>Get in Touch</h2>
+    <p>Chat with us on WhatsApp or email support@voltacompute.com</p>
+    <a href="https://wa.me/18761234567" class="cta">Message on WhatsApp</a>
   </section>
 
   <footer>
